@@ -1,0 +1,35 @@
+@import "@/styles/color.scss"; 
+
+
+.navBorder{
+    border-bottom: 2px solid #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 5px;
+}
+
+.text {
+    margin-left: 5px;
+    color: $color-main-blue;
+    font-weight: bold;
+}
+
+
+.langPanel {
+    margin-left: 100px;
+    margin-right: 20px;
+    text-align: right;
+    
+    .lang {
+        cursor: pointer;
+    }
+}
+
