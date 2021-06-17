@@ -13,6 +13,11 @@
   "author": "Roman Usaev",
   "license": "MIT",
   "dependencies": {
+    "@waves.exchange/provider-cloud": "^1.0.2",
+    "@waves/provider-seed": "^0.1.1",
+    "@waves/signer": "^1.0.2",
+    "@waves/ts-lib-crypto": "^1.4.3",
+    "@waves/waves-transactions": "^4.1.9-beta.5",
     "array-move": "^3.0.1",
     "classnames": "^2.2.6",
     "cookie-cutter": "^0.2.0",
