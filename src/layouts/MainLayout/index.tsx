@@ -10,7 +10,7 @@ export function MainLayout(props: IMain) {
     const {children, title, description, keywords} = props;
     
     return (
-        <>
+        <div className={ styles.container }>
             <Head>
                 <title>{title} | EduMining</title>
                 <meta name="keywords" content={keywords} />
@@ -20,12 +20,12 @@ export function MainLayout(props: IMain) {
                 <Navbar/>
             </div>
             <main>
-                <div className="container is-fluid">
+                <div>
                     {children}
                 </div>
             </main>
             <Footer/>
-        </>
+        </div>
     );
 }
   
