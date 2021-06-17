@@ -1,13 +1,5 @@
 @import "@/styles/color.scss"; 
 
-@font-face {
-    font-family: "Lato";
-    src: local("Lato"), url("/fonts/Lato/Lato-Regular.ttf") format('ttf');
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-}
-
 .container {
     width: 1300px;
     margin-left: calc(50% - 650px);

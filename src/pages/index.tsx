@@ -1,15 +1,8 @@
-import Head from 'next/head'
 import { MainLayout } from '@/layouts/MainLayout';
 
 export default function HomePage() {
     return (
         <>
-            <Head>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Lato"
-                    rel="stylesheet"
-                />
-            </Head>
             <MainLayout 
                 title={'Home page'}
                 keywords={'education, platform, learing'}
@@ -17,9 +10,6 @@ export default function HomePage() {
             >
                 <div>Welcome to EduMining!</div>     
             </MainLayout>
-
-
-
         </>
     );
 }
