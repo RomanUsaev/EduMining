@@ -1,4 +1,7 @@
 
 export interface IRootState {
-    languageUI: string,
+    uiLang: string,
+    menuItem: string,
+    learingLang: string,
+    balance: number,
 }

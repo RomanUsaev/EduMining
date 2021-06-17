@@ -4,7 +4,6 @@ import { useStore } from '@/store/store';
 import Head from 'next/head';
 
 
-
 export default function MyApp({ Component, pageProps }: AppProps) {
     const store = useStore(pageProps.initialReduxState);
     return (

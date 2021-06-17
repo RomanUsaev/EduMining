@@ -12,6 +12,7 @@ class MyDocument extends Document {
         <Head>
             <meta charSet="utf-8" />
             <link href="./styles/main.css" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet"/>
         </Head>
         <body>
             <Main />

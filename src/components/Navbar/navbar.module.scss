@@ -8,7 +8,7 @@
     align-items: center;
 
     box-shadow: 0px 6px 16px rgba(38, 55, 70, 0.08);
-    border-bottom: 2px solid #57595C;
+    border-bottom: 1px solid #57595C;
     margin-bottom: 10px;
 }
 
@@ -18,9 +18,61 @@
     margin-left: 5px;
 }
 
-.text {
-    margin-left: 5px;
-    color: $color-main-blue;
-    font-weight: bold;
+.menu {
+    width: 360px;
+    margin-left: 65px;
+    display: flex;
+    justify-content: center;
+    
+
+    .menuItem {
+        height: 100%;
+        margin-right: 40px;
+        a.text:active, /* активная/посещенная ссылка */
+        a.text:hover,  /* при наведении */
+        a.text {
+            text-decoration: none;
+        }
+
+        .text {
+            color: #818A97;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .active {
+            height: 100%;
+            color: white;
+            border-bottom: 2px solid #9DC7E6;
+        }
+    }
+}
+
+.userBar {
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .balanceBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .balance {
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 20px;
+            color: gold;
+        }
+    }
+
+    .user {
+        margin-left: 100px;
+    }
+
+    .icon {
+        width: 40px;
+    }
 }
 
