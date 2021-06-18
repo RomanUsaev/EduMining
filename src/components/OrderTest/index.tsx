@@ -1,7 +1,9 @@
 import React, { Component, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
+import { IRootState } from  '@/interfaces/IRootState';
 
 import styles from './test.module.scss';
 
@@ -19,9 +21,23 @@ const SortableItem = SortableElement(({value, word, isAnswer}) => {
 
 
 const SortableList = SortableContainer(({items, array, isAnswer}) => {
+    const [isPointSaved, setPointSaved] = useState(false);
     const [isAnswerTrue, setAnswerTrue] = useState(false);
 
+    const balance = useSelector((state: IRootState) => state.balance);
+    const dispatch = useDispatch();
+   
     (items.join() == array.join() && !isAnswerTrue) ? setAnswerTrue(true) : null; 
+
+    
+    if (isAnswer && isAnswerTrue && !isPointSaved) { 
+        console.log(111);
+        dispatch({
+            type: 'SET_BALANCE',
+            balance: balance + 1,
+        });
+        setPointSaved(true)
+    }
 
     return (
         <div className={styles.container}>

@@ -17,6 +17,11 @@ const reducer = (state = initialState, action) => {
           ...state,
           learingLang: action.learingLang,
         }
+      case 'SET_BALANCE':
+        return {
+          ...state,
+          balance: action.balance,
+        }
       default:
         return state
     }
