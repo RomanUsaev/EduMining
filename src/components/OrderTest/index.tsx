@@ -31,11 +31,30 @@ const SortableList = SortableContainer(({items, array, isAnswer}) => {
     
     if (isAnswer && isAnswerTrue && !isPointSaved) { 
 
-        dispatch({
-            type: 'SET_BALANCE',
-            balance: balance + 1,
+        const serverClient = new Serverclient('glue senior among welcome ghost right need hazard prepare next collect quarter whip motion monster');
+        const serverClientUser = new Serverclient('say blame rare eyebrow anchor tornado patrol gown rather deputy attract reject solve victory impose');
+        
+        serverClient
+            .send('3MwPHX96Nu3fLT4RBuda5bBTeNdvyZRFGUV',100000000)
+            .then((transactionData) => {
+                console.log('transactionData', transactionData)
+                //Здесь транзакция уже ушла в блокчейн, но возможно еще не исполнена
+
+                setTimeout(() => {
+                    let serverBalance = 0;
+                    serverClientUser.getBalance()
+                        .then((balance) => {
+                            serverBalance = balance/100000000;;
+                            dispatch({
+                                type: 'SET_BALANCE',
+                                balance: serverBalance,
+                            });
+                            setPointSaved(true);
+                        });                    
+                }, 5000);
         });
-        setPointSaved(true)
+
+        
     }
 
     return (

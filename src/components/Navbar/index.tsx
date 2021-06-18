@@ -2,8 +2,10 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { IRootState } from  '@/interfaces/IRootState';
+import Serverclient from  '@/blockchain/serverclient.js';
 
 import styles from './navbar.module.scss';
+import { useEffect } from 'react';
 
 export function Navbar() {
 
@@ -11,12 +13,22 @@ export function Navbar() {
     const balance = useSelector((state: IRootState) => state.balance);
     const dispatch = useDispatch();
 
-    const handleMenuOnClick = (value: string) => {
-        dispatch({
-            type: 'SET_LANGUAGE_UI',
-            uiLang: value,
-        });
-    } 
+    const serverClientUser = new Serverclient('say blame rare eyebrow anchor tornado patrol gown rather deputy attract reject solve victory impose');
+
+    useEffect(()=> {
+        let serverBalance = 0;
+        serverClientUser.getBalance()
+            .then((balance) => {
+                serverBalance = balance/100000000;
+                dispatch({
+                    type: 'SET_BALANCE',
+                    balance: serverBalance,
+                });
+            });    
+    }, [serverClientUser, dispatch]);
+
+    
+
 
     return (
         <>
