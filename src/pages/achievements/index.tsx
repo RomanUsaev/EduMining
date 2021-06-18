@@ -1,5 +1,5 @@
 import { MainLayout } from '@/layouts/MainLayout';
-import classes from './achivements.module.scss';
+import styles from './achievements.module.scss';
 
 
 export default function AchivementsPage() {
@@ -10,10 +10,13 @@ export default function AchivementsPage() {
                 keywords={'Achivements'}
                 description={'Achivements page'}
             >
-                <div className={classes.textColor}>Achivements page</div>
-                {/*
-                    <p><Link href="/"><a>Back to main menu</a></Link></p>     
-                */}   
+                <div className={styles.container}>
+                    <div className={styles.title}>Target</div>
+                    <div className={styles.canvas}>
+                        <img className={styles.icon}src="/images/achievements.png" />
+                    </div>
+                </div>
+                  
             </MainLayout>
         </>
     );
