@@ -19,6 +19,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@/blockchain/*": ["src/blockchain/*"],
       "@/components/*": ["src/components/*"],
       "@/layouts/*": ["src/layouts/*"],
       "@/pages/*": ["src/pages/*"],

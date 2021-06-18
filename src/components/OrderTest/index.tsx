@@ -4,10 +4,9 @@ import classNames from 'classnames';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import { IRootState } from  '@/interfaces/IRootState';
+import Serverclient from  '@/blockchain/serverclient.js';
 
 import styles from './test.module.scss';
-
-
 
 const SortableItem = SortableElement(({value, word, isAnswer}) => {
     return (
@@ -31,7 +30,7 @@ const SortableList = SortableContainer(({items, array, isAnswer}) => {
 
     
     if (isAnswer && isAnswerTrue && !isPointSaved) { 
-        console.log(111);
+
         dispatch({
             type: 'SET_BALANCE',
             balance: balance + 1,

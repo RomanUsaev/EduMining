@@ -18,7 +18,7 @@ const SortableItem = SortableElement(({value, word}) => {
 });
 
 
-const SortableList = SortableContainer(({items, array, isAnswer}) => {
+const SortableList = SortableContainer(({items, array}) => {
     return (
         <div className={styles.container}>
             { items.map((value, index) => (
