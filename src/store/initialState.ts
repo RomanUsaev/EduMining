@@ -1,6 +1,6 @@
 const initialState = {
     uiLang: 'ru',
-    menuItem: 'Courses',
+    menuItem: 'lesson',
     learingLang: 'en',
     balance: 0,
 }

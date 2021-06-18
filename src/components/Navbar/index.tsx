@@ -29,6 +29,11 @@ export function Navbar() {
                         </a>
                     </div> 
                     <div className={classNames(styles.menuItem)}>
+                        <a className={classNames(styles.text, router.pathname === "/target" ? styles.active : null)} href="/target">
+                            Target
+                        </a>
+                    </div> 
+                    <div className={classNames(styles.menuItem)}>
                         <a className={classNames(styles.text, router.pathname === "/learning" ? styles.active : null)} href="/learning">
                             Learning
                             </a>

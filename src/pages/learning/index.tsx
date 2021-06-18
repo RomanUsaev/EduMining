@@ -1,5 +1,5 @@
 import { MainLayout } from '@/layouts/MainLayout';
-import classes from './learning.module.scss';
+import { LearningLayout } from '@/layouts/LearningLayout';
 
 
 export default function LearningPage() {
@@ -10,10 +10,7 @@ export default function LearningPage() {
                 keywords={'learning'}
                 description={'Learning page'}
             >
-                <div className={classes.textColor}>Learning page</div>
-                {/*
-                    <p><Link href="/"><a>Back to main menu</a></Link></p>     
-                */}   
+                <LearningLayout />
             </MainLayout>
         </>
     );
