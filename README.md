@@ -1,5 +1,5 @@
 # EduMining
-Hackcton. EduMining is an educational platform as a game. 
+Hackaton. EduMining is an educational platform as a game. 
 
 To install: npm install
 
